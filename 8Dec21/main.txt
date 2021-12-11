@@ -1,0 +1,172 @@
+
+1: algoritm de interschimbare
+
+Di: a, b (nr reale)
+De: a, b
+Dm: c
+
+Citeste: a, b
+c<-b
+b<-a
+a<-c
+Scrie: a, b
+
+2: algoritm pentru determinare a maximului
+
+Di:n, x
+De: max
+Dm:i
+
+Citeste: n, x
+max<-x
+pentru i <- 2, n executa
+	citeste x
+	daca x > max
+		max <- x
+scrie max	
+
+3. EXTRAGERE CIFRE NUMAR
+suma cifrelor
+DI: numar
+DE: suma
+DM: -
+citeste numar
+suma <- 0
+cat timp numar != 0 executa
+	suma  <- suma + numar mod 10
+	numar <-  numar div  10
+scrie suma 
+
+inversul unui numar :
+DI: numar
+DE: invers
+DM: -   // numar_initial sau copie_numar
+citeste numar
+//numar_initial = numar
+invers <- 0
+cat timp numar != 0 executa
+	invers  <- suma * 10 + numar mod 10
+	numar <-  numar div  10
+
+// pt palindrom verificam aici daca numar_initial == invers
+scrie suma 
+
+4. Sa se afiseze ultima cifra a nr 123
+Di:numar
+De: ultima_cifra
+Dm
+
+Ultima_cifra <- Numar % 10
+Scrie Ultima_cifra
+
+5.  AFISEAZA PRIMELE DOUA NUMERE 
+di : numar
+De: numar
+Dm
+ 
+cat timp numar > 100  executa
+	numar <- numar div 10
+scrie numar
+
+N 35124 (100000) -> SCOATEM PRIMELE 3      --DECI--> n % 100
+N % 10 000 - > 5124 
+N DIV 100 -> 512 
+
+6. DETERMINAREA DIVIZORILOR
+
+DI: a
+DE: i
+DM: - 
+citeste a
+pentru i <- 2, a / 2 executa
+	daca (a % i == 0) atunci
+		scrie i
+
+7 DETERMINARE NUMAR PRIM
+
+
+citeste a
+ok <- 1                                       				////maiEstePrim <- true  
+pentru i <- 2,  a/2  executa
+	daca (a % i = 0) atunci
+		ok <- 0						///maiEstePrim <- false
+daca (ok = 1) atunci 
+	scrie “Prim”
+altfel
+	scrie “ nu e prim”
+	
+
+8 DETERMINARE CEL MAI MARE DIVIZOR COMUN cmmdc
+--CU IMPARTIRI
+
+citeste a , b
+cat timp  b != 0 executa
+	r <- a%b
+	a <- b
+	b <- r
+
+scrie a
+  
+a: 30, 18,   12   6
+b: 18, 12,    6    0
+r: 12 , 6       0    0
+ALTERNATIV CU SCADERI
+
+cat timp a != b executa
+	daca a > b atunci
+		a = a-b 
+	altfel 
+		b = b-a
+
+scrie a
+
+
+*
+* *
+* * *
+
+MEDIA ARITMETICA
+
+
+citeste n
+suma <-0 
+
+pentru i <- 1, n executa
+citeste a
+suma <- suma + a
+suma <- suma / n
+
+MEDIA ARITMETICA a numerelor pare
+
+citeste n
+suma <-0 
+k <- 0
+pentru i <- 1, n executa
+citeste a
+daca (a % 2 = 0) atunci
+	k = k + 1
+	suma <- suma + a
+
+suma <- suma / k
+
+INTERSCHIMB FARA VARIABILA
+a:--------[----]
+b:--------
+
+a <- a - b
+b <-  a+b
+a <- b-a 
+
+a:--------
+b:--------[----]
+
+x = a-b;
+a = a - b +b                 = x + b	
+b = ((a-b) + b) - (a-b)  = (x + b) - x
+
+CATE CIFRE ARE UN NUMAR
+
+pana cand x = 0 executa
+	cifre <- cifre + 1
+	x <- x / 10
+scrie cifre
