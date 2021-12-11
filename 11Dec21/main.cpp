@@ -65,7 +65,27 @@ int main()
 
     cout << sum;
     */
-
+    
+    /*
+    int a,b,c;
+    cin >> a >> b;
+    c = b;
+    b = a;
+    a = c;
+    cout << a << " " << b << endl;
+    */
+    // DETERMINARE PRIM
+    int a;
+    cin >> a;
+    int prim = 1;
+    for(int i = 2; i <= a/2; i++)
+    {
+        if (a%i == 0)
+            prim = 0;
+    }
+    if (prim == 1)
+        cout << "prim" << endl;
+    
     return 0;
 }
 
